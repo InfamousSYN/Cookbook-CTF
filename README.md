@@ -11,7 +11,7 @@ This cookbook is used setup and prepare the instance environment for CTF events 
 
 ## Attributes
 * `default["libraries"]["i386"] = ["libc6:i386","libncurses5:i386","libstdc++6:i386"]` - Sets the x86 libraries that are to be installed.
-* `default["software"]["software"] = ["gcc-multilib"]` - Sets software/packages to install.
+* `default["applications"]["packages"] = ["gcc-multilib", "gdb"]` - Sets software/packages to install.
 
 ## Usage
 This cookbook has been designed to work in conjunction with Vagrant's instance but can work with Amazon's OpsWork.
@@ -62,16 +62,10 @@ This is the default cookbook recipe, it is used to run the custom recipes in the
 
 #### setup-files
 This recipe creates the files located in the files directory on the instance.
-http://www.trapkit.de/tools/checksec.sh
+* http://www.trapkit.de/tools/checksec.sh
 
-#### libraries
-This recipe will install the required libraries on the instance.
-
-#### software
-This recipe installs software defined by the cookbook's attributes.
-
-#### reboot
-This recipe reboots the system.
+#### x86_libraries
+This recipe will install the required x86 libraries on the instance.
 
 ## Authors and License
 
