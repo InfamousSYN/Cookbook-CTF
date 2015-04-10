@@ -58,7 +58,7 @@ $ git clone https://github.com/InfamousSYN/CTF-Cookbook.git
 ### Recipes
 
 #### default
-This is the default cookbook recipe, it is used to run the custom recipes in the cookbook.
+This is the default cookbook recipe.
 
 #### setup-files
 This recipe creates the files located in the files directory on the instance.
