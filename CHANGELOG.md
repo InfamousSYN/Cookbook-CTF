@@ -3,9 +3,10 @@ CTF-Cookbook CHANGELOG
 
 This file is used to list changes made in each version of the CTF-Cookbook cookbook.
 
-0.1.0
+0.1.1
 -----
 - [InfamousSYN] - Initial release of CTF-Cookbook
+- [InfamousSYN] - Slight optimisation of cookbook by combining recipes.
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
