@@ -11,7 +11,7 @@
 include_recipe 'CTF-Cookbook::x86_libraries'
 include_recipe 'CTF-Cookbook::setup-files'
 
-if node[:gnome][:gui] == 'true' do
+if node[:gnome][:gui] == 'true'
  include_recipe 'CTF-Cookbook::gnome3'
 end
 
