@@ -11,6 +11,10 @@
 include_recipe 'CTF-Cookbook::x86_libraries'
 include_recipe 'CTF-Cookbook::setup-files'
 
+if node[:gnome][:gui] == 'true' do
+ include_recipe 'CTF-Cookbook::gnome3'
+end
+
 # Installed the defined packages.
 node[:applications][:packages].each do |pkg|
  package "#{pkg}" do
