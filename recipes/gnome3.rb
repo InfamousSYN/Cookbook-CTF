@@ -13,7 +13,11 @@ execute "Performing an apt-get update" do
 end
 
 node[:gnome][:packages].each do |gnome_package|
- package gnome_package
+# execute "Installing #{gnome_package}" do
+#  command "sudo apt-get install -y -q -f #{gnome_package}"
+ package "#{gnome_package}" do
+  action :install
+ end
 end
 
 # execute "Add Staging Repository" do

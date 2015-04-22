@@ -8,22 +8,22 @@
 #
 
 # Included recipes.
-include_recipe 'CTF-Cookbook::x86_libraries'
-include_recipe 'CTF-Cookbook::setup-files'
+#include_recipe 'CTF-Cookbook::x86_libraries'
+#include_recipe 'CTF-Cookbook::setup-files'
 
 if node[:gnome][:gui] == 'true'
  include_recipe 'CTF-Cookbook::gnome3'
 end
 
 # Installed the defined packages.
-node[:applications][:packages].each do |pkg|
- package "#{pkg}" do
-  action :install
- end
-end
+#node[:applications][:packages].each do |pkg|
+# package "#{pkg}" do
+#  action :install
+# end
+#end
 
 # Reboots host before use.
-execute "Rebooting Instance" do
- command "reboot"
- ignore_failure true
-end
+#execute "Rebooting Instance" do
+# command "reboot"
+# ignore_failure true
+#end

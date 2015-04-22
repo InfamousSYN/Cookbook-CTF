@@ -6,5 +6,5 @@ default["applications"]["packages"] = ["gcc-multilib", "gdb"]
 
 # Attributes for gnome3
 default["gnome"]["gui"] = 'true'
-default["gnome"]["packages"] = %w{ ubuntu-gnome-desktop }
-#default["gnome"]["packages"] = %w{ gnome-desktop-environment }
+#default["gnome"]["packages"] = %w{ ubuntu-desktop }
+default["gnome"]["packages"] = %w{ gnome-desktop-environment }
