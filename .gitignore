@@ -1,9 +1,17 @@
-.vagrant
-/cookbooks
+# Created by https://www.gitignore.io
 
-# Bundler
-bin/*
-.bundle/*
+### Vagrant ###
+.vagrant/
 
-.kitchen/
-.kitchen.local.yml
+
+### Vim ###
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+### Files ###
+*.deb
+*.tgz

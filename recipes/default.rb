@@ -8,18 +8,17 @@
 #
 
 # Included recipes.
-include_recipe 'CTF-Cookbook::x86_libraries'
-include_recipe 'CTF-Cookbook::setup-files'
+include_recipe 'apt::default'
 
-# Installed the defined packages.
+if node['libraries']['multiarch']
+	include_recipe 'CTF-Cookbook::x86_libraries'
+end
+
+# Installs defined additional packages
 node[:applications][:packages].each do |pkg|
- package "#{pkg}" do
-  action :install
- end
+	package "#{pkg}" do
+		action :install
+	end
 end
 
-# Reboots host before use.
-execute "Rebooting Instance" do
- command "reboot"
- ignore_failure true
-end
+include_recipe 'CTF-Cookbook::ctf-tools'
