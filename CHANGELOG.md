@@ -3,6 +3,14 @@ CTF-Cookbook CHANGELOG
 
 This file is used to list changes made in each version of the CTF-Cookbook cookbook.
 
+2.0.1
+-----
+- [InfamousSYN] - Fixed issue in installation process of pwntools.
+
+2.0.0
+-----
+- [InfamousSYN] - Added support for IDA, Hopper and Pwntools
+
 0.1.1
 -----
 - [InfamousSYN] - Initial release of CTF-Cookbook
