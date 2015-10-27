@@ -11,7 +11,7 @@
 include_recipe 'apt::default'
 
 if node['libraries']['multiarch']
-	include_recipe 'CTF-Cookbook::x86_libraries'
+	include_recipe 'CTF-Cookbook::libraries'
 end
 
 # Installs defined additional packages

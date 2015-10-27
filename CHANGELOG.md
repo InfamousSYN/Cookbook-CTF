@@ -3,6 +3,12 @@ CTF-Cookbook CHANGELOG
 
 This file is used to list changes made in each version of the CTF-Cookbook cookbook.
 
+3.0.0
+-----
+- [InfamousSYN] - Added support to install specific Qemu libraries.
+- [InfamousSYN] - Added support for Java Development Kit.
+- [InfamousSYN] - Creates a copy of the Burp free suite on the host.
+
 2.0.1
 -----
 - [InfamousSYN] - Fixed issue in installation process of pwntools.

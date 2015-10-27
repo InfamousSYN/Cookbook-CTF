@@ -63,6 +63,19 @@ if node['hopper']['enabled']
 	end
 end
 
+# Creates the Burp .jar file.
+if node['java']['enabled']
+	if node['burp']['enabled']
+		cookbook_file "#{node['burp']['package']}" do
+			path "#{node['general']['dir']}/#{node['burp']['package']}"
+			owner node['general']['owner']
+			group node['general']['group']
+			mode node['general']['mode']
+			action :create_if_missing
+		end
+	end
+end
+
 if node['pwntools']['enabled']
 	node[:pwntools][:depends].each do |pwntools_depends|
 		package pwntools_depends do
@@ -73,5 +86,13 @@ if node['pwntools']['enabled']
 	# https://pwntools.readthedocs.org/en/latest/install.html
 	execute 'Installing Pwntools' do
 		command "pip install #{node['pwntools']['package']}"
+	end
+end
+
+if node['qemu']['enabled']
+	node[:qemu][:version].each do |qemu_version|
+		package qemu_version do
+			action :install
+		end
 	end
 end

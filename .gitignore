@@ -13,5 +13,6 @@ Session.vim
 *~
 
 ### Files ###
-*.deb
-*.tgz
+#*.deb
+#*.tgz
+#*.jar
