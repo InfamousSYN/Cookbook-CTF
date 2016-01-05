@@ -3,6 +3,13 @@ CTF-Cookbook CHANGELOG
 
 This file is used to list changes made in each version of the CTF-Cookbook cookbook.
 
+3.0.1
+-----
+- [InfamousSYN] - Fixed issue in i386 library installs.
+- [InfamousSYN] - Further modulised the install of tools.
+- [InfamousSYN] - Added support to ignore package install errors.
+- [InfamousSYN] - Restructured QEMU install process.
+
 3.0.0
 -----
 - [InfamousSYN] - Added support to install specific Qemu libraries.

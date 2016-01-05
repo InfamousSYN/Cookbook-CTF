@@ -7,24 +7,32 @@
 # All rights reserved - Do Not Redistribute
 #
 
-execute 'Adding i386 architectures' do
-	command 'dpkg --add-architecture i386'
-end
+if node['libraries']['multiarch']
+	execute 'Adding architecture support to dpkg' do
+		command "#{node['libraries']['arch']}"
+	end
 
-execute 'Performing an apt-get update' do
-	command 'apt-get update'
-	ignore_failure true
-end
+	execute 'Adding architecture support to dpkg' do
+		command "#{node['libraries']['legacy_method']}"
+	end
 
-node[:libraries][:i386].each do |i386_package|
-	package i386_package do
-		action :install
+	execute 'apt-get update' do
+		command 'sudo apt-get update'
+		ignore_failure true
+	end
+
+	node[:libraries][:i386].each do |i386_package|
+		package i386_package do
+			action :install
+			ignore_failure true
+		end
 	end
 end
 
 if node[:java][:enabled]
 	package "#{node['java']['package']}" do
 		action :install
+		ignore_failure true
 	end
 end
 
